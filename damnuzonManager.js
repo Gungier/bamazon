@@ -1,14 +1,18 @@
 var mysql = require('mysql');
 var inquirer = require('inquirer');
 require('console.table');
+// var LoginCreds = require('node-loginCreds');
+// var loginCreds = new LoginCreds(keys.loginCreds);
+// require('dotenv').config();
+// var keys = require('./key');
 
 // create connection with damnUzon_db database
-var con = mysql.createConnection({
-  host: 'localhost',
+const con = mysql.createConnection({
+  host: "localhost",
   port: 3306,
-  user: 'root',
-  password: 'password123',
-  database: 'damnUzon_db' // insert database name
+  user: "root",
+  password: "password123",
+  database: "damnuzon_db"
 });
 
 // check if connection made
@@ -45,7 +49,7 @@ function managerView() {
   });
 }
 
-// list every available item
+// list all products carried
 // constructor for table
 function Item(id, name, category, department, price, inventory, sales) {
   this.ID = id;

@@ -22,7 +22,7 @@ CREATE TABLE products
     ('Longboard Skateboard', 'Sporting Good', 'Sports & Fitness', 89.95, 45),
     ('Salt and Pepper Set', 'Kitchenware', 'Home & Kitchen', 15.99, 10),
     ('Crossman BB Gun', 'Shooting Sports', 'Sports & Fitness', 77.85, 15),
-    ('Look! A Menue, T-Shirt', 'T-Shirts', 'Clothing', 29.69, 20),
+    ('Look! A Menu, T-Shirt', 'T-Shirts', 'Clothing', 29.69, 20),
     ('Spaceballs', 'BluRay', 'Entertainment', 12.50, 10),
     ('MyPhone 13plus S', 'Mobile Phone', 'Electronics', 1998.98, 150),
     ('SexBox 720', 'Video Game Console', 'Electronics', 498.98, 75),

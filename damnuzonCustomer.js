@@ -24,7 +24,7 @@
 const mysql = require('mysql');
 const inquirer = require('inquirer');
 require('console.table');
-
+// require('dotenv').config();
 
 
 const con = mysql.createConnection({
@@ -166,7 +166,32 @@ function updateRevenue(id, revenue) {
       ],
       (err) => {
         if (err) throw err;
-        con.end();
-        process.exit();
+
+      });
+
+      moreShopping();
+      
+  };
+  function moreShopping() {
+    inquirer.prompt([{
+      name: 'more',
+      type: 'list',
+      message: 'Do you want to shop some more????',
+      choices: ['Absolutely', 'I have enough regrets']
+    },
+    ])
+    .then(function(answer){
+      if (answer.more === 'Absolutely') {
+        console.log('OMG!  THANK YOU!')
+        customerInteraction();
+      }else{
+        console.log('I get it, I would if I were you, too...')
+        endSpree();
       }
-  )};
+      
+    });
+  };
+  function endSpree(){
+    con.end();
+    process.exit();
+  };
